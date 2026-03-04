@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "选课助手",
+  "version": "1.0",
+  "description": "",
+  "background": {
+    "service_worker": "sidepanel.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://jwzf.scau.edu.cn/jwglxt/xtgl/*"],  
+      "js": ["content.js"],
+      "css": []  
+    }
+  ],
+  "permissions": [
+    "storage" , 
+    "sidePanel"
+  ],
+  "action": {
+    "default_title": "选课助手",
+    "default_icon": "icons/icon.png"  ,
+    "default_popup": "popup.html"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
